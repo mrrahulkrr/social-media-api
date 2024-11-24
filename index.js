@@ -23,10 +23,10 @@ app.use(express.json())
 app.set('io', io);
 
 
-app.use('api/users', userRoutes);
-app.use('api/posts', postRoutes);
-app.use('api/comments', commentRoutes);
-app.use('api/chats', chatRoutes);
+app.use('/api/users', userRoutes);
+app.use('/api/posts', postRoutes);
+app.use('/api/comments', commentRoutes);
+app.use('/api/chats', chatRoutes);
 
 const PORT = process.env.PORT || 5000;
 httpServer.listen(PORT, () => console.log(`Server running on port ${PORT}`));
